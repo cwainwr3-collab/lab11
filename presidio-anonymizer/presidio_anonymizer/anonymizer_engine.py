@@ -12,6 +12,7 @@ from presidio_anonymizer.entities import (
     RecognizerResult,
 )
 from presidio_anonymizer.operators import Operator, OperatorType
+from presidio_anonymizer.operators import Initial
 
 DEFAULT = "replace"
 
