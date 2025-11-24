@@ -13,16 +13,19 @@ From the <module> sample.py (line 35),
 to the main method in sample.py (line 29), 
 to the run_anonymizer method in the sample.py (line 13)
 to the anonymize method in AnonymizerEngine Class (line 104)
-[complete the call stack here]
-```
+
 
 * How many if/elif branches are used in selecting the operator?
-*Put your answer here*
+Only 2 if branches are used in selecting an operator. "if not operators_by_type:" and "if not operator:".
 
 * What data structure (a Python data type) exactly is used to select the operator?
-*Put your answer here*
+Python uses a Dictonary of Dictonaries. The first dictonary contains 2 dictionaries, which consists of
+the deanonymizers and anonymizers operators respectively.
 
 * Explain how "Strategy" design pattern is reflected here.
+The strategy design pattern is reflected through how operators are chosen. By using a lookup table
+no extra code is ever required after adding new operators (which are essentially interchangable 
+strategies for the engine to follow).
 
 
 ---
