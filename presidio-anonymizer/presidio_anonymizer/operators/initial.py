@@ -27,7 +27,11 @@ class Initial(Operator):
                 num = 1
                 while (num < len(temp)):
                     if(temp[num].isalnum()):
-                        output+= temp[0:num+1]
+                        output+= temp[0:num]
+                        temp = "" + temp[num]
+                        temp = temp.upper()
+                        output += temp
+                        break
                     else:
                         num += 1
                         print(num)
