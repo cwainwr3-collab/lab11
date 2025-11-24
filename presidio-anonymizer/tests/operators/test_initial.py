@@ -8,7 +8,7 @@ def test_correct_name():
 @pytest.mark.parametrize(
     "input_text, initials",
     [
-        ("John Smith", "J. S."),
+        ("     Eastern    Michigan   University ", "E. M. U."),
     ],
 )
 def test_given_value_for_initial(input_text, initials):
