@@ -20,12 +20,23 @@ class Initial(Operator):
         last_index = len(textArray) -1
         for index, each in enumerate(textArray):
             temp = each
-            output += temp[0]
+            # checking to see if character is alphanumeric, and keeping them in initial if they are
+            if (temp[0].isalnum()):
+               output += temp[0] 
+            else:
+                num = 1
+                while (num < len(temp)):
+                    if(temp[num].isalnum()):
+                        output+= temp[0:num+1]
+                    else:
+                        num += 1
+                        print(num)
+
+            # adding . and space depending on whether it is last initial
             if index == last_index:
                 output += "."
             else:
                 output += ". "        
-        print(output)
         return output
 
 
